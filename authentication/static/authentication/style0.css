@@ -1,0 +1,138 @@
+
+#nav{
+	
+	
+	background-color:rgba(0,0,0,0.5);
+	
+	height:60px;
+	position:sticky;
+	top:0;
+}
+*{
+margin: 0px;
+padding: 0px;
+}
+#left{
+	
+	color:white;
+	padding-left:20px;
+	float:left;
+	
+	
+}
+
+#right{
+	
+	padding:20px 0;
+	color:black;
+	width:600px;
+	float:right;
+
+	
+
+}
+
+
+
+#right ul li{
+	display: inline-block;
+	text-align:center;
+	width:100px;
+	height:40px;
+	list-style:none;
+	float : left;
+	
+}
+
+#right ul li a{
+	color:white;
+	text-decoration: none;
+	font-family: Source Sans Pro;
+	font-size:15px;
+	font-weight:lighter;
+}
+#right ul li ul li{
+	display:none;
+}
+
+#right ul li:hover  ul li{
+	display:block;
+	
+	transition:background 1s;
+}
+.cool-link:hover{
+	
+}
+
+
+#div1{
+	
+	background:linear-gradient(to left, orange,brown,red);
+	height:1000px;
+	
+}
+
+h1{
+	padding-left:500px;
+	
+	
+}
+#p1{
+	color:#fff;
+	text-align:center;
+	padding-left:300px;
+	padding-right:300px;
+	color:white;
+}
+	
+#div2{
+	background-image:url("images/back.png");
+	height:1000px;
+	background-size: cover;
+}
+#sliderbox{
+
+	position:relative;
+	width:5000px;
+	animation-name: slideranimation;
+	animation-duration: 20s;
+	animation-iteration-count:infinite;
+}
+#sliderbox img{
+	float:left;
+}
+@keyframes slideranimation{
+	0%
+	{
+		left:0px;
+	}
+	20%
+	{
+		left:0px;
+	}
+	25%
+	{
+		left: -800px;
+	}
+	45%
+	{
+		left: -800px;
+	}
+	50%
+	{
+		left: -1600px;
+	}
+	70%
+	{
+		left: -1600px;
+	}
+	75%
+	{
+		left: -2400px;
+	}
+	
+}
+div3{
+	height:200px;
+}
+	

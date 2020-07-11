@@ -1,0 +1,14 @@
+{% extends 'authentication/base2.html' %}
+{% block maincontent %}
+
+{% if user.is_authenticated %}
+<p>Hello!!!!</p>
+{%  else %}
+<div >
+    <h1>ABOUT US</h1>
+    <p id="p1">ContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContentContent</p>
+    
+    </div>
+
+{% endif %}
+{% endblock %}

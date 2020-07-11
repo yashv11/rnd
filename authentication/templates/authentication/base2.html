@@ -1,0 +1,59 @@
+{% load static %}
+
+<!doctype html>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel="stylesheet" href="{% static 'authentication/style0.css'%}">
+		<link rel="stylesheet" href="{% static 'authentication/Bootstrap/css/bootstrap.css' % }">
+
+	</head>
+
+	<body>
+	<div id="div2">
+		
+		<div id="nav">
+			<div id="left">
+			
+				<div ><img src="{% static 'authentication/images/logo.png'%}" height="60px" width="100px"></div>
+				
+			</div>
+
+			<div id="right">
+				<ul >
+					{% if user.is_authenticated %}
+					<li class="cool-link"><a href="/">Home</a></li>
+					{%  else %}
+					<li class="cool-link"><a href="/">Home</a></li>
+					{% endif %}
+					<li class="cool-link"><a href=#>Contact Us</a>
+						<ul>
+							<li class="cool-link" ><a href=#>Facebook</a></li>
+							<li class="cool-link" ><a href=#>Facebook</a></li>
+							<li class="cool-link" ><a href=#>Facebook</a></li>
+							<li class="cool-link" ><a href=#>Facebook</a></li>
+						</ul></li>
+					
+					
+					
+					{% if user.is_authenticated %}
+					
+					<li class="cool-link"><a href="#">Data</a></li>
+					<li class="cool-link"> Hello {{user.first_name}} </li>
+					<li class="cool-link"><a href="logout">Logout</a></li>
+					{%  else %}
+					
+					<li class="cool-link"><a href="index">Login</a></li>
+					<li class="cool-link"><a href="registerpage">Register</a></li>
+					{% endif %}
+				</ul>
+			</div>
+			<div style="clear:both;"></div>
+			</div>
+			
+            
+            {% block maincontent %}
+
+            {% endblock %}
+	</body>
+</html>

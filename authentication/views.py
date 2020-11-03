@@ -23,7 +23,7 @@ def index(request):
             auth.login(request,user)
             return render(request,'authentication/homepage.html')
         else:
-            messages.info(request,'invalid credentials')
+            messages.info(request,'Invalid Credentials')
             return redirect('index')
     else:
         return render(request,'authentication/index.html')
@@ -37,7 +37,7 @@ def register(request):
         email = request.POST['email']
 
         if User.objects.filter(username=email).exists():
-            messages.info(request,'Email taken')
+            messages.info(request,'Email already taken')
             return redirect('registerpage')
         elif User.objects.filter(email=email).exists():
             messages.info(request,'Email Alredy taken')
@@ -59,6 +59,11 @@ def logout(request):
 
 def homepage(request):
     return render(request,'authentication/homepage.html')
+
+def experience(request):
+    return render(request,'authentication/experience.html')
+
+
 
 
 

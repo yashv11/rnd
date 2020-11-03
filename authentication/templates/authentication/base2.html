@@ -38,13 +38,16 @@
 					
 					{% if user.is_authenticated %}
 					
-					<li class="cool-link"><a href="#">Data</a></li>
+					<li class="cool-link"><a href="question">Questions</a></li>
 					<li class="cool-link"> Hello {{user.first_name}} </li>
+					
+					<li class="cool-link"><a href="#">Leaderboard</a></li>
 					<li class="cool-link"><a href="logout">Logout</a></li>
 					{%  else %}
 					
 					<li class="cool-link"><a href="index">Login</a></li>
 					<li class="cool-link"><a href="registerpage">Register</a></li>
+					<li class="cool-link"><a href="experience">Experience</a></li>
 					{% endif %}
 				</ul>
 			</div>
